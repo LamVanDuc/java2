@@ -21,7 +21,7 @@ public class SecondThread extends Thread{
             }
             try{
 
-                Thread.sleep(1000);}catch (InterruptedException e){
+                Thread.sleep(300);}catch (InterruptedException e){
                 e.printStackTrace();
             }
         }

@@ -1,6 +1,6 @@
 public class Countter {
 
-    public  void count(){
+    public void count(){
         int value = 0;
         while (value < 10){
             System.out.println("Count: " + (++value));
@@ -9,7 +9,7 @@ public class Countter {
 
     }
 
-    public  void countDown(){
+    public void countDown(){
         int value = 10;
 
         while (value >=0){

@@ -1,29 +1,22 @@
-public class FirstThread extends Thread{
+public class FirstThread implements Runnable{
 
 
-    private String nameRun;
-    private int number;
 
-
-    public FirstThread(String nameRun, int number) {
-        this.nameRun = nameRun;
-        this.number = number;
-
-    }
-
-    @Override
-    public void run(){
-        int count = number;
-        for (int i = 0 ; i < number; i++){
-            System.out.println(nameRun + " : "+ count--);
+    public void Thread(String name){
+        int count = 5;
+        for (int i = 0 ; i < 5; i++){
+            System.out.println(name + " : "+ count--);
             try{
-                Thread.sleep(1000);}catch (InterruptedException e){
+                Thread.sleep(300);}catch (InterruptedException e){
                 e.printStackTrace();
             }
         }
-
-        System.out.println(nameRun + "  exiting.");
-        }
-
-
+        System.out.println(name + "  exiting.");
     }
+    @Override
+    public void run(){
+        Thread(Thread.currentThread().getName());
+    }
+
+
+}

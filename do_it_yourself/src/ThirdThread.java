@@ -21,7 +21,7 @@ public class ThirdThread extends Thread{
             }
             try{
 
-                Thread.sleep(1000);}catch (InterruptedException e){
+                Thread.sleep(350);}catch (InterruptedException e){
                 e.printStackTrace();
             }
         }

@@ -1,5 +1,9 @@
+import java.nio.file.FileStore;
+
 public class MyThread{
     public static void main(String[] args) throws InterruptedException{
+
+
 
 //        try {
 //
@@ -15,16 +19,31 @@ public class MyThread{
 //            e.printStackTrace();
 //        }
 
-        FirstThread firstThread = new FirstThread("First",5);
-        SecondThread secondThread = new SecondThread("Second",5);
-        ThirdThread thirdThread = new ThirdThread("Third",5);
+        FirstThread thread = new FirstThread();
+
+        Thread first = new Thread(thread);
+        Thread second = new Thread(thread);
+        Thread third = new Thread(thread);
+
+        first.setName("First");
+        second.setName("Second");
+        third.setName("Third");
+
+        first.start();
+        second.start();
+        third.start();
+
+
+//        FirstThread firstThread = new FirstThread();
+//        FirstThread firstThread2 = new FirstThread();
+//        SecondThread secondThread = new SecondThread();
+//        ThirdThread thirdThread = new ThirdThread("Third",5);
 
 
 
-        firstThread.start();
-        secondThread.start();
-        thirdThread.start();
-
+//            firstThread.start();
+//            secondThread.start();
+//            thirdThread.start();
 
     }
 }
